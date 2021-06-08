@@ -1,0 +1,276 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+        font-size: 62.5%;
+        font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    font-size: 2rem;
+}
+
+main {
+    height: 100%;
+    width: 100vw;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(180deg, #FF99C4, rgba(255, 255, 255, 0.3) 100%);
+    width: 100vw;
+    height: 35rem;
+    align-items: top;
+    padding: 0 6rem 15rem 6rem;
+}
+
+
+.conteudo {
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100%;
+    padding: 2rem 10rem;
+    align-items: center;
+    background: rgba(244, 155, 140, 0.8);
+}
+
+
+
+.footer li {
+    display: flex;
+    list-style: none;
+    padding: 0.8rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.topo-logo img {
+    width: 25rem;
+    height: 25rem;
+}
+
+.grid {
+    display: grid;
+    background: white;
+    grid-template-columns: 2fr 1fr 2fr 1fr;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    justify-content: center;
+    
+    padding: 0 10rem 10rem 10rem;
+    gap: 3rem;
+    grid-template-areas: 
+        'cabeca cabeca cabeca cabeca'
+        'peca2 peca3 peca5 peca4'
+        'peca2 peca6 peca5 peca7'
+    ;
+}
+
+.grid div {
+    display: flex;
+    background: #fff;
+    justify-content: center;
+    padding: 2rem;
+    box-shadow: 0rem 0.5rem 1rem grey;
+    border-radius: 2.5rem;
+}
+
+.grid div:nth-child(1) {
+    background: rgb(60, 158, 238);
+    grid-area: cabeca;
+    background-image: url(../img/pngtree-summer-ice-cream-ice-cream-propaganda-image_11340.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+    height: 15vh;
+}
+
+.grid div:nth-child(2) {
+    grid-area: peca2;
+}
+.grid div:nth-child(5) {
+    grid-area: peca3;
+}
+
+.grid div:nth-child(3) {
+    grid-area: peca4;
+}
+.grid div:nth-child(4) {
+    grid-area: peca5;
+}
+.grid div:nth-child(6) {
+    grid-area: peca6;
+}
+.grid div:nth-child(7) {
+    grid-area: peca7;
+}
+
+.grid img {
+    width: 100%;
+    height: 100%;
+}
+
+.catalogo-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem
+}
+
+.baixo-logo img {
+    width: 15rem;
+    height: 15rem;
+}
+
+.pesquisa{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    background: #fff;
+    border:solid 1px rgba(141,141,141, 0.6);
+    border-radius:2.5rem;
+    box-shadow: 0rem 0.3rem 1rem rgba(141,141,141, 0.5);
+    height: 5rem;
+}
+  
+.texto-pesquisa {
+    background:transparent;
+    font-size:2.6rem;
+    border: 0 none;
+    outline: 0;
+    
+}
+
+.botao-pesquisa {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.botao-pesquisa img {
+    width: 3rem;
+    height: 3rem;
+}
+
+@media screen and (max-width: 1200px){
+    html {
+        font-size: 56.25%;
+    }
+
+    .grid {
+        gap: 7rem 4rem ;
+    }
+}
+
+@media screen and (max-width: 900px){
+    html {
+        font-size: 50%;
+    }
+
+    .grid {
+        gap: 7rem 4rem ;
+    }
+}
+
+@media screen and (max-width: 768px){
+    html {
+        font-size: 43.75%;
+    }
+
+    .grid {
+        gap: 7rem 4rem ;
+        padding: 0 5rem 5rem 5rem;
+    }
+}
+
+@media screen and (max-width: 683px){
+    html {
+        font-size: 37.5%;
+    }
+
+    .grid {
+        display: grid;
+        background: white;
+        grid-template-columns: 1fr 0.5fr 1fr;
+        grid-template-rows: auto;
+        justify-content: center;     
+        gap: 7rem 4rem ;
+        grid-template-areas: 
+            'cabeca cabeca cabeca'
+            'peca2 peca2 peca3'
+            'peca2 peca2 peca6'
+            'peca4 peca5 peca5'
+            'peca7 peca5 peca5'
+        ;
+    }
+
+    /*.footer {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        justify-content: center;
+        text-align: center;
+        gap: 3rem;
+    }*/
+
+    .pesquisa .texto-pesquisa{
+        display: none;
+    }
+
+    .pesquisa {  
+        padding: 0;
+        justify-content: center;
+        align-items: center;   
+        height: 6rem;
+        width: 6rem;
+        border-radius:50%;
+        
+    }
+
+    .pesquisa:hover {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 6rem;
+        border-radius:3.5rem;
+    }
+
+
+    .footer {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+
+    .footer li {
+        padding: 1.5rem;
+    }
+
+    .footer .baixo-logo {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    html {
+        font-size: 35%;
+    }
+    
+    .grid {
+        padding: 0 5rem 5rem 5rem;
+    }
+}
