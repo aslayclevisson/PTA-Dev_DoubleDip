@@ -229,28 +229,6 @@ main {
         gap: 3rem;
     }*/
 
-    .pesquisa .texto-pesquisa{
-        display: none;
-    }
-
-    .pesquisa {  
-        padding: 0;
-        justify-content: center;
-        align-items: center;   
-        height: 6rem;
-        width: 6rem;
-        border-radius:50%;
-        
-    }
-
-    .pesquisa:hover {
-        display: flex;
-        flex-direction: column;
-        width: 40vw;
-        height: 6rem;
-        border-radius:3.5rem;
-    }
-
 
     .footer {
         display: flex;
@@ -277,11 +255,42 @@ main {
         padding: 0 5rem 10rem 5rem;
         grid-template-columns: 1fr 0.3fr 1fr;
     }
+
+    .pesquisa .texto-pesquisa{
+        display: none;
+    }
+
+    .pesquisa {  
+        padding: 0;
+        justify-content: center;
+        align-items: center;   
+        height: 6rem;
+        width: 6rem;
+        border-radius:50%;
+        
+    }
+
+    .pesquisa:hover {
+        display: flex;
+        width: 40vw;
+        height: 6rem;
+        border-radius:3.5rem;
+        justify-content: flex-end;
+        padding: 2rem;
+    }
 }
 
 @media screen and (max-width: 320px) {
     html {
         font-size: 35%;
+    }
+
+    .cabecalho {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 6rem 10rem 6rem;
+        height: 50rem;
     }
 
     .grid {
