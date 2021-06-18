@@ -6,8 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/testegridarea.css">
+    <link rel="stylesheet" href="./assets/css/estiloDesafio.css">
     <title>DesafioDev</title>
+    <script>
+        const backBlue = () => {
+            document.getElementsByClassName("cabecalho")[0].style.background = "linear-gradient(180deg, rgba(81, 111, 251, 0.8) 44.17%, rgba(255, 255, 255, 0.12) 100%)";
+            document.getElementsByClassName("footer")[0].style.background = "rgba(81, 111, 251, 0.56)";
+        };
+
+        const backPink = () => {
+            document.getElementsByClassName("cabecalho")[0].style.background = "linear-gradient(180deg, #FF99C4, rgba(255, 255, 255, 0.3) 100%)";
+            document.getElementsByClassName("footer")[0].style.background = "rgba(244, 155, 140, 0.56)";
+        };
+
+        const backOrange = () => {
+            document.getElementsByClassName("cabecalho")[0].style.background = "linear-gradient(180deg, rgba(240, 94, 43, 0.8) 44.17%, rgba(255, 255, 255, 0.12) 100%)";
+            document.getElementsByClassName("footer")[0].style.background = "rgba(240, 94, 43, 0.56)";
+        };
+    </script>
+
 </head>
 <body>
     <section class="cabecalho">
@@ -16,6 +33,24 @@
                 <a href="#"><img src="./assets/img/logo.svg" alt="imagem-logo"></a>
             </div>
         </header>
+
+        <div class="botoes-cores">
+            <div>
+                <button class="orange" onclick="backOrange()">
+                    <img src="./assets/img/ice-cream-orange.png" alt="ice-cream-orange">
+                </button>
+            </div>
+            <div>
+                <button class="blue" onClick="backBlue()">
+                    <img src="./assets/img/ice-cream-blue.png" alt="ice-cream-blue">
+                </button>
+            </div>
+            <div>
+                <button class="pink" onClick="backPink()">
+                    <img src="./assets/img/ice-cream-pink.png" alt="ice-cream-pink">
+                </button>
+            </div>
+        </div>
 
         <div class="pesquisa">
             <input type="text" id="campo-pesquisa" class="texto-pesquisa" placeholder="Procure seu sorvete"/>
